@@ -1,0 +1,130 @@
+*{
+  padding: 0;
+  margin: 0;
+  text-decoration: none;
+  list-style: none;
+  box-sizing: border-box;
+}
+/*Se le quita la decoración al enlace, se le asigna un tipo de letra y tamaño*/  
+.enlace{
+  position: absolute;
+  padding: 10px 40px;
+  color: white;
+  text-decoration: none;
+  font-family:cursive;
+  font-size: 25px;
+}
+.enlace:hover{
+  color: white;
+}
+/*Tamaño del logo*/ 
+.logo{height: 40px;}
+/*Se le añade un color de fondo al nav y un tamaño*/
+nav{
+  background: #F50003;
+  height: 10vh;
+  width: 100%;
+}
+/*Los ul del nav se a linean a la derecha*/ 
+nav ul{
+  float: right;
+  margin-right: 20px;
+}
+nav ul li{
+  display: inline-block;
+  line-height: 60px;
+  margin: 0 5px;
+}
+/*Estilos para los enlaces del nav que se encuentran en li*/
+nav ul li a{
+  color: #fff;
+  font-size: 18px;
+  padding: 7px 13px;
+  border-radius: 3px;
+  text-transform: uppercase;
+  text-decoration: none;
+}
+/*Estilos para los enlaces del nav que se encuentran en li pero que son seleccionados*/
+li a:hover{
+  background: #FBB034;
+  transition: .5s;
+  color: white;
+  text-decoration: none;
+
+}
+.checkbtn{
+  font-size: 30px;
+  color: #fff;
+  float: right;
+  line-height: 60px;
+  margin-right: 40px;
+  cursor: pointer;
+  display: none;
+}
+#check{
+  display: none;
+}
+/*Estilos para el section que se le da un tamaño y un fondo el cual solo se repite en eje x*/
+section{
+  background-color: white;
+  height: 100vh;
+}
+/*margen de los input*/
+.input-group{margin-top: 15px; }
+#input1{margin-top: -20px;}
+/*Color, tamaño y margen del boton*/
+.btn{
+  margin-top: 10px;
+  width: 100%;
+  background-color: #FBB034;
+}
+/*Color y margen del card que es el formulario*/
+.card{
+  background-color: #4F1F91;
+  margin-top: -8%;
+}
+/*Color  y tamaño del footer*/ 
+footer{
+  background-color: #4F1F91;
+  width:100%;
+  height:10vh;
+}
+/*Media para dispositivos con una anchura máx. de 952px*/ 
+@media (max-width: 952px){
+  .enlace{padding-left: 20px;}
+  nav ul li a{  font-size: 16px;}
+}
+/*Media para dispositivos con una anchura máx. de 858px*/  
+@media (max-width: 858px){
+  .enlace{font-size: 15px;}
+  .checkbtn{display: block;}
+  .card{z-index: 2;}
+  ul{
+    position: fixed;
+    z-index: 3;
+    width: 100%;
+    height: 100vh;
+    background: #4F1F91;
+    top: 60px;
+    left: -100%;
+    text-align: center;
+    transition: all .5s;    
+  }
+  nav ul li{
+    display: block;
+    margin: 50px 0;
+    line-height: 30px;
+  }
+  nav ul li a{font-size: 20px;}
+  li a:hover{
+    color: white;
+    background-color:#7d55b4;
+  }
+  #check:checked ~ ul{left:0;}
+  footer{
+    background-color: #a27ed6;
+    width:100%;
+    margin-top: 100px;
+    height:10vh;
+  }  
+}
